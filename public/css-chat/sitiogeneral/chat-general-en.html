@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+        <title>Chat - Royal Reservations</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Questrial');
+        </style>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+         <link href="chat-style.css" rel="stylesheet">
+       <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115261189-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-115261189-1');
+</script>
+    </head>
+    <body>
+            <div class="chat-container">
+                 <div class="header-chat-base">
+                        <img src="http://www.betaroyal.oh.marketing/img/logo-royalreservations-min.png" alt="Royal Reservations Online Chat">
+                </div>
+          
+            <form name="cicVals" action="Start.html" id="signupForm" method="get">
+                     <div class="input-box">
+					     <label for="email">*Name:</label>
+					     <input id="name" name="chatUsername" type="text" required="">
+                    </div> 
+                    <div class="input-box">
+                        <label for="email">*Email</label>
+                        <input id="email" name="chatEmail" type="email" required="" >
+                    </div> 
+                  
+					<div class="input-box">
+                    <label for="email">Phone Number</label>
+                         <input id="phone" name="chatTelephone" type="text">
+                    </div> 
+                
+					<div class="input-box combo-box">
+                        <label for="resort">*Department</label>
+                        <div class="select-2">
+                             <select size="1" name="target" >
+                                <option value="0" selected="">Select an area</option>
+                                <option value="Chat_Customer_Service">Customer Service</option>
+                                <option value="Chat_MX_Destinations">Cancun / Riviera Maya</option>
+                                <option value="Chat_Caribbean_Destinations" >St. Marteen / Curacao</option>
+                                <option value="Chat_Grand_Residences">Grand Residences</option>
+                                <option value="Chat_AlSol_Caribbean">Punta Cana</option>
+                            </select>
+                        </div>
+                         
+                    </div> 
+                   
+					<div class="input-box combo-box">
+                        <label for="email">Please send us your question</label>
+                        <textarea name="chatDescription" rows="5" cols="60" placeholder=""></textarea>
+                    </div> 
+                    <div class="input-button">
+                         <input id="btn-chat-now" name="btn-chat" type="submit" value="CHAT NOW">
+                    </div> 
+                    <input type="hidden" name="language" value="English">
+               
+                <div class="privacy-box">
+                 <a href="https://royalreservations.com/resort-policies " target="_blank">Privacy Policy</a>
+                </div>
+                    
+             </form>
+            </div>
+            
+        <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script> 
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+     <script>
+      
+  $(function() {
+
+    var form = document.getElementById('signupForm');
+    
+      
+        $("#signupForm").validate(
+        {
+            // Specify validation rules
+            rules: 
+            {
+                target: { valueNotEquals: "0" },
+                chatEmail: 
+                {
+                    required: {
+                                depends:function(){
+                                    $(this).val($.trim($(this).val()));
+                                    return true;
+                                }   
+                              },
+                    customemail: true
+                },
+                chatUsername: 
+                {
+                required: true
+                }
+            },
+            // Specify validation error messages
+            messages: 
+            {
+                chatUsername:"Please enter your name.",
+                chatEmail:
+                {
+                    required:"Please enter your email.",
+                    email:"Your Email field is in the wrong format, please verify it."
+                },
+                target: 
+                { 
+                    valueNotEquals: "Please choose a department option." 
+                }
+     
+            },
+            // Make sure the form is submitted to the destination defined
+            // in the "action" attribute of the form when valid
+            submitHandler: function(form) 
+            {
+                
+                gtag('event', 'chat_now', 
+                {
+                'event_label':'Chat Area General En',
+                'event_category':'RoyalReservations',
+                'value':0,
+                'event_callback': function() 
+                    {
+                    form.submit(); 
+                    }
+        });
+            }
+        }
+        );
+
+      //Personalizado de validación campo email con expresion regular
+        $.validator.addMethod("customemail", 
+            function(value, element) 
+            {
+                return /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*\w+([-.]\w+)*$/.test(value);
+            }, 
+            "Your Email field is in the wrong format, please verify it.");
+      
+        $.validator.addMethod("valueNotEquals", function(value, element, arg)
+            {
+                return arg !== value;
+            }, "Value must not equal arg.");
+
+
+});
+        </script>
+    </body>
+    
+</html>

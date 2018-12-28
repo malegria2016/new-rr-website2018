@@ -1,0 +1,13 @@
+User-agent: *
+
+Allow: /
+
+Disallow: /tours
+Disallow: /app/
+Disallow: /banners/
+Disallow: /fonts/
+Disallow: /images/
+Disallow: /includes/
+Disallow: /fb_pages/
+Disallow: /emailblast
+Disallow: /temp

@@ -1,0 +1,141 @@
+.chat-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 10px;
+   }
+   input{
+    border-radius: .8rem;
+
+    border: 0px solid rgba(0, 0, 0, 0.15);
+    background-color:#f4f4f4;
+   
+   }
+   .input-box{
+       display:flex;
+       flex-direction:row;
+       align-items:center;
+       justify-content: space-between;
+       margin: 10px 5%;
+        width: 90%;
+   }
+   .header-chat{
+       background:#0B2C64;
+       width: 100%;
+       padding: 5px;
+       border-radius: 10px;
+       display: flex;
+       justify-content: center;
+   }
+   .header-chat-base{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+}
+   #email, #name{
+       width:100%;
+   }
+   form{
+    margin-top: 10%;
+    width: 100%;
+    display: flex;
+flex-direction: column;
+font-family: 'Questrial', sans-serif;
+   }
+   input, select{
+       height: 35px;
+       width:65%;
+       color:#adadad;
+       font-size: 1em;
+       padding-left:10px;
+       font-family: 'Questrial', sans-serif;
+   }
+   .input-box label{
+       margin-left:5px;
+       margin-bottom:5px;
+       color: #49a4ce;
+   } 
+
+#btn-chat-now{
+       background-color:#FDB319;
+       color:#fff;
+}
+.input-button{
+       width:100%;
+       display:flex;
+       justify-content:center;
+}
+#btn-chat-now:hover{
+    border:1px solid #FDB319;
+    transition:.3s ease;
+    border-color: #ffce69;
+    background-color:#fff;
+    color:#FDB319;
+   }
+.input-button input{
+    font-size: 1em;
+   }
+.combo-box{
+    flex-direction: column;
+    text-align: left;
+}
+.combo-box .select,   .combo-box label{
+    width:100%;
+}
+ .resort{
+       background:red !important;
+   }
+select {
+    width: 100%;
+    padding:0px 20px;
+    border-radius: .8rem;
+    line-height: 1;
+    border: 0px solid rgba(0, 0, 0, 0.15);
+    height: 35px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color:#f4f4f4;
+}
+.input-box textarea{
+    background-color:#f4f4f4;
+    border: none;
+    border-radius: .8rem;
+    padding: 10px 1%;
+    width:98%;
+    color: #adadad;
+    font-size: 1em;
+    font-family: 'Questrial', sans-serif;
+}
+.select{
+    position:relative;
+}
+.combo-box .select:after {
+    content: '\f078';
+    font: normal normal normal 17px/1 FontAwesome;
+    color:#adadad;
+    right: 11px;
+    top: 2px;
+    height: 34px;
+    padding: 5px 0px 0px 4px;
+    position: absolute;
+    pointer-events: none;
+}
+.privacy-box{
+    display:flex;
+    justify-content:center;
+    margin:10px 0;
+
+}
+.privacy-box a{
+    text-decoration:none;
+}
+.privacy-box a:hover{
+    text-decoration:none;
+    border-bottom-style: solid;
+border-bottom-color: #0B2C64;
+}

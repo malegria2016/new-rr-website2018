@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Chat</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Questrial');
+        </style>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link href="chat-style.css" rel="stylesheet">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    </head>
+    <body>
+            <div class="chat-container">
+                <div class="header-chat">
+                     <img src="http://theroyalislander.com/img/logo/the-royal-islander.png" alt="The Royal Islander All Suites Resort">
+                </div>
+               
+            <form name="signupForm" id="signupForm" method="get">
+                     <div class="input-box">
+					     <label for="email">*Nombre:</label>
+					     <input id="name" name="chatUsername" type="text">
+                    </div> 
+                    <div class="input-box">
+                        <label for="email">*Email:</label>
+                        <input id="email" name="chatEmail" type="text" >
+                    </div> 
+                  
+					<div class="input-box">
+                    <label for="email">Número telefónico:</label>
+                        <input id="email" name="chatTelephone" type="text">
+                    </div> 
+                
+					<div class="input-box combo-box">
+                        <label for="resort">*Resorts o Servicio a Huéspedes:</label>
+                        <div class="select">
+                    
+                            <select size="1" name="target" >
+                                <option value="0" selected="">Selecciona un área</option>
+                                <option value="Chat_Customer_Service">Customer Service</option>
+                                <option value="Chat_Caribbean_Destinations">Cancun / Riviera Maya</option>
+                              
+                              
+                            </select>
+                        </div>
+                         
+                    </div> 
+                   
+					<div class="input-box combo-box">
+                        <label for="email">¿Cual es su pregunta?</label>
+                        <textarea name="chatDescription" required="" rows="5" cols="60" placeholder=""></textarea>
+                    </div> 
+                    <div class="input-button">
+                         <input id="btn-chat-now" name="btn-chat" type="submit" value="CHATEAR AHORA">
+                    </div> 
+                    <input type="hidden" name="language" value="Spanish">
+               
+                <div class="privacy-box">
+                    <a href="https://royalreservations.com/es/politicas-de-los-desarrollos" target="_blank">Aviso de privacidad</a>
+                </div>
+                    
+             </form>
+            </div>
+            
+       
+       <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script> 
+    </body>
+    
+</html>
