@@ -15,6 +15,7 @@
 		<!-- Fonts -->
 		</style>
 
+
 			@php
 			if(!config('app.debug')){
 			@endphp
